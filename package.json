@@ -17,10 +17,13 @@
     "ts-jest": "^29.2.5",
     "aws-cdk": "2.1030.0",
     "ts-node": "^10.9.2",
-    "typescript": "~5.6.3"
+    "typescript": "~5.6.3",
+    "aws-sdk": "2.1692.0"
   },
   "dependencies": {
-    "aws-cdk-lib": "2.215.0",
-    "constructs": "^10.0.0"
+    "aws-cdk-lib": "2.232.0",
+    "@aws-cdk/aws-bedrock-agentcore-alpha": "2.232.0-alpha.0",
+    "constructs": "^10.0.0",
+    "deploy-time-build": "0.4.4"
   }
 }
