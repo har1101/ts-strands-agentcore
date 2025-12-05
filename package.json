@@ -18,7 +18,7 @@
     "aws-cdk": "2.1030.0",
     "ts-node": "^10.9.2",
     "typescript": "~5.6.3",
-    "aws-sdk": "2.1692.0"
+    "@aws-sdk/client-bedrock-agentcore": "latest"
   },
   "dependencies": {
     "aws-cdk-lib": "2.232.0",
