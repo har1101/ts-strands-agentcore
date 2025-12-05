@@ -1,20 +1,21 @@
 {
-  "name": "ts-agent",
+  "name": "ts-strands-agentcore",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsc && node dist/index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
   "dependencies": {
-    "@strands-agents/sdk": "^0.1.2"
+    "@aws-sdk/client-bedrock-agentcore": "latest",
+    "@hono/node-server": "^1.19.6",
+    "@strands-agents/sdk": "latest",
+    "bedrock-agentcore": "^0.1.1",
+    "hono": "^4.10.7",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
-    "@types/node": "^24.10.1",
-    "typescript": "^5.9.3"
+    "typescript": "^5.3.3"
   }
 }
