@@ -9,7 +9,7 @@ const MODEL_ID = process.env.MODEL_ID || 'jp.anthropic.claude-haiku-4-5-20251001
 const bedrock = new strands.BedrockModel({ modelId: MODEL_ID })
 const agent = new strands.Agent({ 
   model: bedrock, 
-  systemPrompt: "あなたはユーザーの質問に対してWeb検索を行うAIエージェントです。また、語尾には「🔥」のアイコンを必ず付けてください。", 
+  systemPrompt: "あなたはユーザーの質問に対してWeb検索を行うAIエージェントです。どんなURLを使ったのかも含めてレスポンスしてください。また、語尾に「Hono!」と付けてください。例えば「了解しましたHono!」のような形です。", 
   tools: [httpRequest] 
 })
 
