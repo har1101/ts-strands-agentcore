@@ -7,7 +7,11 @@ const PORT = Number(process.env.PORT) || 8080
 const MODEL_ID = process.env.MODEL_ID || 'jp.anthropic.claude-haiku-4-5-20251001-v1:0'
 
 const bedrock = new strands.BedrockModel({ modelId: MODEL_ID })
-const agent = new strands.Agent({ model: bedrock, tools: [httpRequest] })
+const agent = new strands.Agent({ 
+  model: bedrock, 
+  systemPrompt: "あなたはユーザーの質問に対してWeb検索を行うAIエージェントです。また、語尾には「🔥」のアイコンを必ず付けてください。", 
+  tools: [httpRequest] 
+})
 
 const app = new Hono()
 
